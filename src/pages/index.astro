@@ -1,0 +1,66 @@
+---
+import Badge from '@components/Badge.astro';
+import Layout from '@layouts/Layout.astro';
+import LinkedIn from '@assets/icons/LinkedIn.astro';
+import SocialPill from '@components/SocialPill.astro';
+import GitHub from '@assets/icons/GitHub.astro';
+import Mail from '@assets/icons/Mail.astro';
+import Experience from '@components/Experience.astro';
+import SectionContainer from '@components/SectionContainer.astro';
+import Briefcase from '@assets/icons/Briefcase.astro';
+import Code from '@assets/icons/Code.astro';
+import Projects from '@components/Projects.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title="Portafolio de Fredy - Desarrollador Web">
+	
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-24">
+			<h1 class="text-white text-3xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+				Hola, soy Fredy 
+				<a href="https://www.linkedin.com/in/freddiejair" target="_blank" rel="noopener" class="flex justify-center items-center">
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+				Recien egresado con 2 años de experiencia. Desarrollador y Programador Web. Del Estado de México. Con conocimientos en Laravel, .NET Core, Python, JavaScript, Bootstrap, Tailwind, Astro, Angular 19, Bases de Datos SQL y SQL Server
+			</h2>
+
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/freddiejair">
+					<LinkedIn class="size-4 md:size-6"/>
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/ItsFreddie91">
+					<GitHub class="size-4 md:size-6"/>
+					GitHub
+				</SocialPill>
+				<SocialPill href="mailto:freddyjairva@gmail.com">
+					<Mail class="size-4 md:size-6" />
+					freddyjairva@gmail.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7" />
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer> 
+		
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer> 
+
+	</main>
+</Layout>
